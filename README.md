@@ -1,3 +1,4 @@
-# Info
+# Blog 
 
-- posts format: YEAR-MONTH-DAY-title.MARKUP
+[scotto.me](https://www.scotto.me) using Jekyll.
+
