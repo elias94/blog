@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-metadata
+src/.jekyll-cache
+.clj-kondo
+.lsp
+.calva
+/dist

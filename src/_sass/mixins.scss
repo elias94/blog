@@ -1,0 +1,21 @@
+@mixin mq($breakpoint, $type: min)
+{
+  @if map-has-key($breakpoints, $breakpoint)
+  {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @if $type == max
+    {
+      $breakpoint-value: $breakpoint-value - 1;
+    }
+
+    @media (#{$type}-width: $breakpoint-value)
+    {
+      @content;
+    }
+  }
+  @else
+  {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}

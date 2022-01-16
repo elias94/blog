@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {% include head.html %}
+
+  <body className="light">
+    <div id="app">
+
+      {% include header.html %}
+
+      {{ content }}
+
+      {% include footer.html %}
+
+    </div>
+
+    <script type="application/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+
+  </body>
+</html>
