@@ -2,7 +2,7 @@
 layout: home
 ---
 
-<div class="home">
+<div class="center">
   <a href="/" style="color: white;">
     <div class="main-title">
       <div aria-label="ELIA">
@@ -24,7 +24,7 @@ layout: home
     </div>
   </a>
 
-  <div class="home-content">
+  <div class="center-content">
     {% include post-list.html %}
   </div>
 </div>
