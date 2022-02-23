@@ -6,10 +6,11 @@ layout: home
   <a href="/" style="color: white;">
     <div class="main-title">
       <div aria-label="ELIA">
-        <span class="char1" aria-hidden="true" style="opacity: 1;">E</span>
+        <!-- <span class="char1" aria-hidden="true" style="opacity: 1;">E</span>
         <span class="char2" aria-hidden="true" style="opacity: 1;">L</span>
         <span class="char3" aria-hidden="true" style="opacity: 1;">I</span>
-        <span class="char4" aria-hidden="true" style="opacity: 1;">A</span>
+        <span class="char4" aria-hidden="true" style="opacity: 1;">A</span> -->
+        ELIA
       </div>
       <div aria-label="SCO">
         <span class="char5" aria-hidden="true" style="opacity: 1;">S</span>

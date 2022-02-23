@@ -8,8 +8,17 @@ layout: center
 Hey, my name is Elia Scotto. I'm an Italian guy currently living in Australia.
 I'm passionate about developing projects and prototiping ideas for the web.
 <br/><br/>
-If you want to discuss a project, send me an email!
+If you want to discuss a project, 
+<span style="text-decoration: underline;" title="look down!">
+  send me an email!
+</span>
 </div>
+
+---
+
+## Contacts
+
+**elia** **@** **hey** **.** **com**
 
 ---
 
@@ -31,15 +40,10 @@ a strong experience in Python, Javascript (React) and CSS.
 
 ---
 
-## Contacts
-
-"elia" + "@" + "hey" + ".com"
-
----
-
 ## This website
 
 This website is written using Markdown and styled with SCSS. Some JS is used for
-the theme switcher. Build with **jekyll**. Code blocks are managed by Codemirror. There is no 
-`package.json` in the repository. Sources are on Github and is served via 
-Netlify.
+the theme switcher. Build with **jekyll**. Code blocks are managed by Codemirror,
+but there is no node in the repository. Sources are on Github and is served via 
+Netlify. I'm using [my own yekill manager](https://github.com/elias94/cljk) written
+in [Clojure](https://tryclojure.org/).
