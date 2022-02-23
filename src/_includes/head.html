@@ -24,20 +24,21 @@
   <link rel="mask-icon" color="#5bbad5" href="{{ 'assets/img/favicon/safari-pinned-tab.svg' | relative_url }}">
 
   <!-- Search engines -->
-  <meta name="image" content="{{ 'assets/img/favicon/site.webmanifest' | relative_url }}">
+  <meta name="image" content="{{ site.url }}{{ 'assets/img/favicon/logo-large.png' | relative_url }}">
   <meta itemprop="name" content="{{ page.title }}">
   <meta itemprop="description" content="{{ page.desc }}">
-  <meta itemprop="image" content="{{ 'assets/img/favicon/site.webmanifest' | relative_url }}">
+  <meta itemprop="image" content="{{ site.url }}{{ 'assets/img/favicon/logo-large.png' | relative_url }}">
 
   <!-- Twitter -->
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:creator" content="@elia_scotto">
   <meta name="twitter:site" content="scotto.me">
+  <meta name="twitter:image" content="{{ site.url }}{{ 'assets/img/favicon/logo-large.png' | relative_url }}">
   
   <!-- OpenGraph -->
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.desc }}">
-  <meta property="og:image" content="{{ 'assets/img/favicon/site.webmanifest' | relative_url }}">
+  <meta property="og:image" content="{{ site.url }}{{ 'assets/img/favicon/logo-large.png' | relative_url }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site" content="scotto.me">
   <meta property="og:type" content="{% if page.path contains '_posts' %}article{% else %}website{% endif %}">
