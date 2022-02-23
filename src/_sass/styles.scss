@@ -189,6 +189,11 @@ p {
 }
 
 .center {
+  a {
+    text-decoration: none;
+    font-weight: normal;
+  }
+  
   .main-title {
     font-weight: 700;
     font-size: 5em;

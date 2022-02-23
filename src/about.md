@@ -9,7 +9,7 @@ Hey, my name is Elia Scotto. I'm an Italian guy currently living in Australia.
 I'm passionate about developing projects and prototiping ideas for the web.
 <br/><br/>
 If you want to discuss a project, 
-<span style="text-decoration: underline;" title="look down!">
+<span style="text-decoration: underline;" title="see below">
   send me an email!
 </span>
 </div>
