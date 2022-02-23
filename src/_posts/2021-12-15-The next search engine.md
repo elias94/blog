@@ -2,6 +2,7 @@
 title: The next search engine
 categories: search
 layout: post
+desc: It's a while that I've been thinking about a new search engine, and the need for it has also recently been raised in communities like HN.
 ---
 
 It's a while that I've been thinking about a new search engine, and the need for it has

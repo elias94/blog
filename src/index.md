@@ -1,5 +1,7 @@
 ---
 layout: home
+title: Elia Scotto - Homepage
+desc: Personal homepage with blog
 ---
 
 <div class="center">
