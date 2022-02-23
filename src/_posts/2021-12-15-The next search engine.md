@@ -5,7 +5,7 @@ layout: post
 desc: It's a while that I've been thinking about a new search engine, and the need for it has also recently been raised in communities like HN.
 ---
 
-It's a while that I've been thinking about a new search engine, and the need for it has
+It's been a while that I'm thinking about a new search engine, and the need for it has
 also recently been raised in communities like HN. In this post I will share my
 thoughts on the features I would like to have in the next search engine.
 
