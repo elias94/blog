@@ -28,15 +28,21 @@ I've 6 years of professional development in 3 different startups, where I mostly
 worked remotely. I started as a **frontend** engineer, where I expanded my knowledge 
 of **UI/UX**, and transitioned to developing **full-stack** solutions. 
 My favourite technologies are Clojure and Clojurescript for
-server and client, PostgreSQL for the database, linux on the server. I also have
-a strong experience in Python, Javascript (React) and CSS.
+server and client, PostgreSQL for the database, Linux on the server. I also have
+a strong experience in Javascript (React/Node), Python and CSS.
 
 
 ### Prev Positions
 
-- **VUGO** UI of the video streaming platform and the mobile solution
-- **CloudAcademy** platform UI and user graphs for the e-learning app
-- **Sysdig** created open source UIs and worked on the monitoring dashboard
+- [**Sysdig**](https://sysdig.com/) open source UIs and enterprise monitoring dashboard
+- [**CloudAcademy**](https://cloudacademy.com/) platform UI and data science for the e-learning app
+- [**VUGO**](https://www.vugoentertainment.com/) UI of the video streaming platform and mobile solution
+
+---
+
+## Projects
+
+My open source projects are hosted on [github](https://github.com/elias94).
 
 ---
 

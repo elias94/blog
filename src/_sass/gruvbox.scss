@@ -10,7 +10,7 @@
 .cm-s-gruvbox.CodeMirror,
 .cm-s-gruvbox .CodeMirror-gutters {
   background-color: var(--code-background-color);
-  color: #bdae93;
+  color: var(--code-parens-color);
 }
 .cm-s-gruvbox .CodeMirror-gutters {
   background: var(--code-background-color);
@@ -20,7 +20,7 @@
   color: #7c6f64;
 }
 .cm-s-gruvbox .CodeMirror-cursor {
-  border-left: 1px solid #ebdbb2;
+  border-left: 1px solid var(--code-text-color-main);
 }
 .cm-s-gruvbox.cm-fat-cursor .CodeMirror-cursor {
   background-color: #8e8d8875 !important;
@@ -40,33 +40,33 @@
 }
 .cm-s-gruvbox span.cm-number,
 span.cm-atom {
-  color: #d3869b;
+  color: var(--code-text-color-pink);
 }
 .cm-s-gruvbox span.cm-keyword {
-  color: #f84934;
+  color: var(--code-text-color-red);
 }
 
 .cm-s-gruvbox span.cm-variable {
-  color: #ebdbb2;
+  color: var(--code-text-color-main);
 }
 .cm-s-gruvbox span.cm-variable-2 {
-  color: #ebdbb2;
+  color: var(--code-text-color-main);
 }
 .cm-s-gruvbox span.cm-variable-3,
 .cm-s-gruvbox span.cm-type {
-  color: #fabd2f;
+  color: var(--code-text-color-yellow);
 }
 .cm-s-gruvbox span.cm-operator {
-  color: #ebdbb2;
+  color: var(--code-text-color-main);
 }
 .cm-s-gruvbox span.cm-callee {
-  color: #ebdbb2;
+  color: var(--code-text-color-main);
 }
 .cm-s-gruvbox span.cm-def {
-  color: #ebdbb2;
+  color: var(--code-text-color-main);
 }
 .cm-s-gruvbox span.cm-property {
-  color: #ebdbb2;
+  color: var(--code-text-color-main);
 }
 .cm-s-gruvbox span.cm-string {
   color: #b8bb26;
@@ -88,8 +88,8 @@ span.cm-atom {
 }
 
 .cm-s-gruvbox span.cm-builtin {
-  color: #fabd2f;
+  color: var(--code-text-color-yellow);
 }
 .cm-s-gruvbox span.cm-tag {
-  color: #fabd2f;
+  color: var(--code-text-color-yellow);
 }

@@ -5,7 +5,7 @@ desc: Personal homepage with blog
 ---
 
 <div class="center">
-  <a href="/" style="color: white;">
+  <a href="/" style="color: white;text-decoration:none;">
     <div class="main-title">
       <div aria-label="ELIA">
         <!-- <span class="char1" aria-hidden="true" style="opacity: 1;">E</span>

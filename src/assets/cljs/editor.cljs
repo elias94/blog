@@ -3,71 +3,59 @@
          '[clojure.string :as string])
 
 (defn editor
-  [id state]
-  (let [lines (string/split-lines @state)
-        cm (.fromTextArea  js/CodeMirror
+  [id source]
+  (let [cm (.fromTextArea  js/CodeMirror
                            (.getElementById js/document id)
                            #js {:mode "clojure"
                                 :theme "gruvbox"
                                 :lineNumbers true
                                 :smartIndent true
                                 :tabSize 2})]
-    (.on cm "change" (fn [_ _]
-                       (reset! state (.getValue cm))))
+    (.on cm "change" (fn [_ _] (reset! source (.getValue cm))))
     (.setSize cm "auto" "auto")))
 
-(defn renderable-element?
-  [elem]
-  (and (vector? elem)
-       (keyword? (first elem))
-       (not= (str (first elem)) ":")
-       (not (re-matches #"[0-9]+" (name (first elem))))
-       (not (re-matches #".*[\W]+" (name (first elem))))))
-
-(defn renderable?
-  [elem]
-  (when (or (renderable-element? elem) (seq? elem))
-    (let [[k props content] elem
-          [props content] (if (and (nil? content)
-                                   (not (map? props)))
-                            [nil props]
-                            [props content])]
-      (cond
-        (seq? elem) (not (empty? (filter renderable? elem)))
-        (seq? content) (not (empty? (filter renderable? content)))
-        :else (or (renderable-element? content)
-                  (renderable-element? elem)
-                  (string? content)
-                  (number? content))))))
+(defn render-component [res]
+  (let [id (random-uuid)]
+    (r/create-class
+     {:display-name "render-component"
+      :component-did-mount
+      (fn []
+        (rdom/render [res] (.getElementById js/document (str id))))
+      :reagent-render
+      (fn []
+        [:div {:id id}])})))
 
 (defn result-component
-  [state]
-  (fn [state]
-    (let [res (try {:result (js/scittle.core.eval_string @state)}
+  [source]
+  (fn [source]
+    (let [res (try (js/scittle.core.eval_string source)
                    (catch :default e
                      {:error (.-message e)}))
           error? (contains? res :error)]
       [:div.result
        [:pre
-        (if (renderable? res)
-          [:div res]
-          (list
-           [:div (if error? "Error:" "Output:")]
-           [:code
-            (str (if error? (:error res) (:result res)))]))]])))
+        (cond
+          ;; To be rendered needs to be a function with meta :reagent true
+          (and (fn? res) (-> res meta :reagent true?))
+          [render-component res]
+
+          :else [:<>
+                 [:div (if error? "Error:" "Output:")]
+                 [:code
+                  (str (if error? (:error res) res))]])]])))
 
 (defn run-clj
   [elem]
   (let [id (gensym "src-")
         src-str (.-innerText elem)
         child (first (.-childNodes elem))
-        state (r/atom (string/trim src-str))]
-    (rdom/render [:textarea {:id id} src-str] child)
-    (editor id state)
-    (rdom/render [result-component state] child)))
+        source (r/atom (string/trim-newline src-str))]
+    (rdom/render [:textarea {:id id :rows 1} src-str] child)
+    (editor id source)
+    (rdom/render [result-component @source] child)))
 
 (defn js-codeblock
-  [id lines]
+  [id]
   (let [cm (.fromTextArea  js/CodeMirror
                            (.getElementById js/document id)
                            #js {:mode "javascript"
@@ -84,9 +72,9 @@
         src-str (.-innerText elem)
         child (first (.-childNodes elem))]
     (rdom/render [:textarea {:id id} src-str] child)
-    (js-codeblock id (string/split-lines (string/trim src-str)))))
+    (js-codeblock id)))
 
-(defn run! []
+(defn run-editor []
   (let [clj-blocks (vec (.getElementsByClassName js/document
                                                  "language-clojure"))
         js-blocks  (vec (.getElementsByClassName js/document
@@ -94,4 +82,7 @@
     (mapv run-clj clj-blocks)
     (mapv show-js js-blocks)))
 
-(run!)
+;; Add a function render used to add a reagent meta to the parameter (function)
+(js/scittle.core.eval_string "(defn render [f] (with-meta f {:reagent true}))")
+
+(run-editor)

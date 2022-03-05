@@ -38,9 +38,10 @@ a:visited {
 }
 
 ul {
-  list-style-position: inside;
-  margin: 1.75rem 0;
-  margin-left: 5px;
+  list-style: unset !important;
+  list-style-position: inside !important;
+  margin: 1.75rem 0 !important;
+  margin-left: 5px !important;
 }
 
 li {
@@ -49,7 +50,7 @@ li {
 }
 
 hr {
-  margin: 30px 0 40px 0;
+  margin: 30px 0 50px 0;
   color: transparent;
 }
 
@@ -59,14 +60,15 @@ h1 {
 }
 
 h2 {
-  font-size: 2.6rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.6rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 h3 {
   font-size: 2rem;
   margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 h4 {
@@ -85,8 +87,8 @@ h6 {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
-  font-weight: bold;
+  line-height: 1.1 !important;
+  font-weight: bold !important;
 }
 
 /* Reduce header size on mobile */
@@ -129,6 +131,7 @@ p {
     font-size: 14px;
     color: var(--code-text-color);
     background: var(--code-background-color);
+    white-space: nowrap;
   }
 }
 
@@ -190,7 +193,7 @@ p {
 
 .center {
   a {
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: normal;
   }
 
@@ -304,7 +307,7 @@ p {
   }
 
   &-nav {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 30px;
     display: block;
     color: var(--text-color-secondary);
@@ -316,6 +319,10 @@ p {
       margin-top: 1.75rem;
       font-weight: 900;
       font-size: 28px;
+    }
+
+    h2 {
+      margin-top: 3rem !important;
     }
 
     a {
@@ -364,6 +371,19 @@ p {
     a {
       color: var(--text-color);
     }
+
+    p > img {
+      display: block;
+      margin: 0 auto;
+
+    }
+
+    img + em {
+      display: block;
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: 14px;
+    }
   }
 }
 
@@ -378,23 +398,23 @@ h3.title {
   margin-bottom: 30px;
 }
 
-// .highlighter-rouge {
-//   font-size: 14px;
-//   margin: 30px 0;
-//   background-color: var(--code-background-color);
-//   box-shadow: var(--code-textarea-shadow);
-//   padding: 20px 0;
+div.highlighter-rouge {
+  font-size: 14px;
+  margin: 30px 0;
+  background-color: var(--code-background-color);
+  box-shadow: var(--code-textarea-shadow);
+  padding: 20px 0;
 
-//   border-radius: 20px;
-//   border: var(--code-textarea-border);
-//   overflow: hidden;
+  border-radius: 20px;
+  border: var(--code-textarea-border);
+  overflow: hidden;
 
-//   .result {
-//     color: var(--code-text-color);
-//     padding-left: 10px;
-//     padding-top: 5px;
-//   }
-// }
+  .result {
+    color: var(--code-text-color);
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+}
 
 .code-results {
   margin: 20px 15px 5px 15px;
