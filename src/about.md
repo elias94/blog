@@ -5,8 +5,8 @@ layout: center
 # Hello
 
 <div class="text-large">
-Hey, my name is Elia Scotto. I'm an Italian guy currently living in Australia.
-I'm passionate about developing projects and prototiping ideas for the web.
+Hey, my name is Elia Scotto. I'm an Italian developer currently living in Australia.
+I'm passionate about coding projects and prototiping ideas for the web.
 <br/><br/>
 If you want to discuss a project, 
 <span style="text-decoration: underline;" title="see below">
