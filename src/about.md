@@ -5,8 +5,8 @@ layout: center
 # Hello
 
 <div class="text-large">
-Hey, my name is Elia Scotto. I'm an Italian developer currently living in Australia.
-I'm passionate about coding projects and prototiping ideas for the web.
+Hey, my name is Elia Scotto. I'm a freelance developer currently living in Australia.
+I'm passionate about coding projects and prototyping ideas for the web.
 <br/><br/>
 If you want to discuss a project, 
 <span style="text-decoration: underline;" title="see below">
@@ -18,7 +18,7 @@ If you want to discuss a project,
 
 ## Contacts
 
-**elia** **@** **hey** **.** **com**
+**elia** **@** **scotto** **.** **me**
 
 ---
 
@@ -48,8 +48,8 @@ My open source projects are hosted on [github](https://github.com/elias94).
 
 ## This website
 
-This website is written using Markdown and styled with SCSS. Some JS is used for
-the theme switcher. Build with **jekyll**. Code blocks are managed by Codemirror,
-but there is no node in the repository. Sources are on Github and is served via 
+This website is written using Markdown and styled with SCSS and preprocessed by Jekyll. 
+Some JS is used for the theme switcher and Code blocks are managed by Codemirror,
+No NPM packages have been tortured for this project. Sources are on Github and is served via 
 Netlify. I'm using [my own yekill manager](https://github.com/elias94/cljk) written
 in [Clojure](https://tryclojure.org/).
